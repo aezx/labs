@@ -1,0 +1,53 @@
+/* Main */
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  background-color: #141414;
+  font-family: 'Lato', sans-serif;
+  color: crimson;
+ }
+
+h3 {
+  font-family: 'raleway', sans-serif;
+}
+
+hr {
+  background-color: blue;
+  width: 200;
+}
+
+/* Link Animation */
+
+h3 > a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+h3 > a:hover {
+  color: #000;
+}
+
+h3 > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: cornflowerblue;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+h3 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
